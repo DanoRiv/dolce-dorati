@@ -1,78 +1,130 @@
-.content--container{
-  padding: 1rem;
-}
+  .header--container {
+    width  : 100%;
+    display: flex;
+  }
 
-.header--container{
-  width: 100%;
-  display: flex;
-}
-.header--logo{
-  max-width: 35%;
-  position: relative;
-  margin: auto;
-}
+  .header--logo {
+    max-width: 35%;
+    position : relative;
+    margin   : auto;
+  }
 
-.search-bar{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  position: relative;
-  margin-top: 1.5rem;
-}
+  .search-bar {
+    display        : flex;
+    justify-content: space-evenly;
+    align-items    : center;
+    position       : relative;
+    margin-top     : 1.5rem;
+  }
 
-.search-bar--input{
+  .search-bar--input {
+    background-color: var(--secondary-light);
+    border          : 0;
+    border-radius   : 45px;
+    height          : 1.5rem;
+    width           : 70%;
+    padding-left    : 2.5rem;
+    transition      : 180ms box-shadow ease-in-out;
+  }
+
+  .search-bar--icon {
+    position: absolute;
+    filter  : invert(6%) sepia(8%) saturate(3303%) hue-rotate(230deg) brightness(93%) contrast(92%);
+    height  : 1.5em;
+    left    : 0.5rem;
+    z-index : 2;
+  }
+
+  .search-bar--input:focus {
+    outline: 2px solid var(--secondary-accent);
+  }
+
+  .search-bar--filter-btn {
+    border          : 0px;
+    border-radius   : 45px;
+    background-color: var(--secondary-accent);
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    cursor          : pointer;
+  }
+
+  .search-bar--filter-btn img {
+    height: 1.5rem;
+    width : 1rem;
+  }
+
+  .categories h4 {
+    margin-bottom: 0.5rem;
+    color        : var(--text-grey-black);
+  }
+  .categories--btn-container {
+    width          : 100%;
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-between;
+  }
+
+  .button img {
+    height: 1.8em;
+  }
+
+  .button--state-active {
+    background-color: var(--secondary-accent);
+    color           : var(--text-white);
+    box-shadow: 2px 2px 10px 0px rgba(74, 74, 74, 0.47);
+    width: 30%;
+  }
+
+  .button--state-inactive {
   background-color: var(--secondary-light);
-  border: 0;
-  border-radius: 45px;
-  height: 1.5rem;
-  width: 70%;
-  padding-left: 2.5rem;
-  transition: 180ms box-shadow ease-in-out;
-}
-.search-bar--icon {
-  position: absolute;
-  filter: invert(6%) sepia(8%) saturate(3303%) hue-rotate(230deg) brightness(93%) contrast(92%);
-  height: 1.5em;
-  left: 0.5rem;
-  z-index: 2;
-}
-
-.search-bar--input:focus{
-  outline: 2px solid var(--secondary-accent);
-}
-
-.search-bar--filter-btn{
-  border: 0px;
-  border-radius: 45px;
-  background-color: var(--secondary-accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.search-bar--filter-btn img {
-  height: 1.5rem;
-  width: 1rem;
-}
-
-.categories--btn-container{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.button img{
-  height: 1.8em;
-}
-
-.button--state-active{
-  background-color: var(--secondary-accent);
-  color: var(--text-white);
-}
-
-.button--state-inactive{
   color: var(--text-grey-black);
-  opacity: 50%;
+  opacity   : 65%;
+  box-shadow: 2px 2px 10px 0px rgba(74, 74, 74, 0.47);
+  width: 30%;
+  }
+
+  .products {
+    display              : grid;
+    grid-template-columns: auto auto;
+    height           : 50vh;
+    gap                  : 0.6rem;
+    margin-top           : 1.5rem;
+    overflow-y           : auto;
+    overflow-x           : hidden;
+    scrollbar-width      : none;
+    -ms-overflow-style   : none;
+    position             : absolute;
+    padding              : 0.2rem 1rem;
+    left                 : 0;
+    right                : 0;
+  }
+
+  .products::-webkit-scrollbar {
+    display: none;
+  }
+
+  .products--card {
+    border-radius  : 24px;
+    padding        : 1rem;
+    box-shadow     : 1px 1px 5px 0px rgba(74, 74, 74, 0.47);
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-evenly;
+  }
+
+  .products--card p {
+    height        : 20%;
+    padding-bottom: 0.5rem;
+  }
+
+  .product-card--picture {
+    width : 90%;
+    height: 45%;
+  }
+
+  .product-card--addBtn {
+    display        : flex;
+    justify-content: space-between;
+    height         : 10%;
 }

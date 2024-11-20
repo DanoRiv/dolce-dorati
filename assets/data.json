@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "name": "Pastel con cobertura de chocolate",
+    "img": "../assets/images/Chocolate-Cake.png",
+    "price": "$ 68.000"
+  },
+  {
+    "id": "2",
+    "name": "Torta Genovesa",
+    "img": "../assets/images/Black-Forest-Cake.png",
+    "price": "$ 58.000"
+  },
+  {
+    "id": "3",
+    "name": "Pastel de cumpleaños",
+    "img": "../assets/images/Happy-Birthday-Icing-Cake.png",
+    "price": "$ 45.000"
+  },
+  {
+    "id": "4",
+    "name": "Pastel para boda",
+    "img": "../assets/images/Wedding-Cake.png",
+    "price": "$ 75.000"
+  }
+]
