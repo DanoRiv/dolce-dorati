@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/loginclien.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <title>Dolce Dorati</title>
+</head>
+
+<body>
+  <div class="phone-frame">
+    <!-- encabezado telefono -->
+    <section class="status-bar">
+      <span class="clock-text">9:27</span>
+      <div>
+        <img src="assets/icons/cellularConnection.svg" alt="cellular icon" />
+        <img src="assets/icons/wifi.svg" alt="wifi icon" />
+        <img src="assets/icons/battery.svg" alt="battery icon" />
+      </div>
+    </section>
+
+    <div class="form-wrapper">
+      <!-- Sección de encabezado -->
+      <div class="header">
+        <div class="header-content">
+          <h2>Iniciar Sesión</h2>
+        </div>
+        <div class="profile-image">
+          <img src="assets/images/profile-gray.png" alt="Imagen de perfil">
+          <p>Bienvenido</p>
+        </div>
+      </div>
+
+      <div class="form-container">
+        <h1>Ingresa tus datos</h1>
+        <form action="/submit" method="POST">
+
+          <!-- Campo para el correo electrónico -->
+          <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
+
+          <!-- Campo para la contraseña -->
+          <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" required>
+
+          <!-- Botones de tipo de usuario -->
+          <div class="user-type-buttons">
+            <a type="button" href="login.html" class="user-button">Cliente</a>
+            <a type="button" href="loginempr.html" class="user-button active">Empresa</a>
+            <a type="button" href="loginempl.html" class="user-button">Empleado</a>
+          </div>
+
+          <!-- Botón de iniciar sesión -->
+          <button type="submit">Iniciar Sesión</button>
+
+          <!-- Registro -->
+          <p class="register-text">¿Aún no tienes cuenta? <a href="#">Regístrate</a></p>
+        </form>
+      </div>
+      
+      <!-- Menú -->
+      <nav class="navbar">
+        <div class="navbar--list">
+          <a href="index.html" class="navbar--list-item">
+            <img src="assets/icons/home.svg" alt="navbar home button" />
+            Inicio
+          </a>
+          <a href="#" class="navbar--list-item">
+            <img src="assets/icons/magnify.svg" alt="navbar search button" />
+            Buscar
+          </a>
+          <a href="" class="navbar--list-item">
+            <img src="assets/icons/cart-heart.svg" alt="navbar cart button" />
+            Carrito
+          </a>
+          <a href="login.html" class="navbar--list-item active">
+            <img src="assets/icons/account.svg" alt="navbar profile button" />
+            Perfil
+          </a>
+        </div>
+      </nav>
+    </div>
+</body>
+
+</html>
