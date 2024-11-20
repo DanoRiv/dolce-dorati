@@ -4,6 +4,11 @@ async function load() {
     let myData = await response.json()
 
     const container = document.getElementById('products-data')
+
+    const basePath = window.location.hostname === "danoriv.github.io"
+      ? `/${window.location.pathname.split('/')[1]}`
+      : ""; // Empty for local
+
   
     myData.forEach(item => {
       const productCard = document.createElement('div');
@@ -11,12 +16,12 @@ async function load() {
 
 
       productCard.innerHTML = `
-        <img src="${item.img}" alt="cake picture" class="product-card--picture">
+        <img src="${basePath}/${item.img}" alt="cake picture" class="product-card--picture">
         <p>${item.name}</p>
         <div class="product-card--addBtn">
           <span>${item.price}</span>
           <a href="#" data-id="${item.id}">
-            <img src="../assets/icons/add btn.svg" alt="add to cart icon">
+            <img src="${basePath}/assets/icons/add btn.svg" alt="add to cart icon">
           </a>
         </div>
       `;
