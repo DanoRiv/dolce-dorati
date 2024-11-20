@@ -2,6 +2,7 @@
   width          : 100%;
   display        : flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .cart-items__container {
@@ -23,6 +24,12 @@
 
 .cart-items {
   display: flex;
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
 }
 
 .cart-item__img {
@@ -65,4 +72,7 @@
   line-height     : 1.5em;
 }
 
-.cart-item__delete-button {}
+.cart-item__delete-button {
+  margin: auto;
+  background-color: var(--primary-background);
+}

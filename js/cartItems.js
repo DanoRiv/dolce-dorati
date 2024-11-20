@@ -4,6 +4,13 @@ async function loadCartItems() {
   const cart = JSON.parse(localStorage.getItem('cart')) || []
   const cartItemsContainer = document.getElementById('cart-items')
 
+  if(cart.length === 0) {
+    const emptyCart = document.createElement('div')
+    emptyCart.classList.add('cart-empty')
+    emptyCart.innerHTML = `<h4>No hay productos en el carrito</h4>`
+    cartItemsContainer.appendChild(emptyCart)
+  }
+
   cart.forEach((productId) => {
     const item = myData.find((product) => product.id === productId)
 
@@ -23,7 +30,7 @@ async function loadCartItems() {
         </div>
         <span class="cart-item__total-price">${item.price}</span>
       </div>
-      <button class="button cart-item__delete-button"><img src="assets/icons/off_outline_close.svg" alt=""> Eliminar</button>
+      <button class="button cart-item__delete-button" data-id=${item.id}><img src="assets/icons/off_outline_close.svg" alt=""> Eliminar</button>
       `
 
       cartItemsContainer.appendChild(cartItem)
@@ -88,7 +95,17 @@ function updateTotalPrice(cartItemElement, quantity) {
 
 function deleteItem(event) {
   event.preventDefault()
-  
+  const productId = event.currentTarget.dataset.id
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  console.log(cart)
+  const updatedCart = cart.filter(cartItem =>
+    cartItem !== productId)
+  console.log(updatedCart)
+
+  localStorage.setItem('cart', JSON.stringify(updatedCart));
+
+  location.reload();
 }
 
 window.onload = loadCartItems
