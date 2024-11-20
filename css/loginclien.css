@@ -1,0 +1,127 @@
+:root {
+    --primary-background: #FDFDFD;
+    --primary-card-background: #E8E8E8;
+    --secondary-accent: #613768;
+    --secondary-light: #CCA0D3;
+    --text-white: #FFFFFF;
+    --text-grey-black: #1A141F;
+}
+
+
+/* Sección de encabezado */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+/* Iniciar Sesión encabezado */
+
+.header-content h2 {
+    font-size: 1.2rem;
+    color: var(#1A141F);
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+/* Imagen de perfil */
+
+.profile-image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 0.1px solid var(--primary-card-background);
+}
+
+
+/* Ingresa tus datos encabezado */
+
+h1 {
+    color: var(--text-grey-black);
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: left;
+    margin-left: 45px;
+}
+
+/* Botones de tipo de usuario */
+
+.user-type-buttons {
+    display: inline-flex;
+    gap: 6px;
+    margin-bottom: 0 auto;
+}
+
+.user-button {
+    padding: 0.4rem 0.7rem;
+    background-color: var(--primary-background);
+    color: var(--secondary);
+    border: 0.5px solid var(--text-grey-black);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.user-button.active {
+    background-color: var(--secondary-accent);
+    color: var(--primary-background);
+}
+
+.user-button:hover {
+    background-color: var(--secondary-light);
+    color: var(--text-white);
+}
+
+/* Texto para registrarse */
+
+.register-text {
+    color: var(--text-grey-black);
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+}
+
+.register-text a {
+    color: var(--text-grey-black);
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+/* Estilo para el texto de correo y contraseña */
+
+input {
+    padding: 0.4rem;
+    margin-bottom: 0.4rem;
+    border: 1px solid var(--text-grey-black);
+    border-radius: 18px;
+    font-size: 1rem;
+    width: 70%;
+}
+
+/* Botón de iniciar sesión*/
+
+button {
+    background-color: var(--secondary-accent);
+    color: var(--text-white);
+    padding: 0.6rem;
+    width: 70%;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    font-weight: 400;
+    margin-top: 0.8rem;
+}
+
