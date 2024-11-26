@@ -31,7 +31,7 @@
     position: absolute;
     filter  : invert(6%) sepia(8%) saturate(3303%) hue-rotate(230deg) brightness(93%) contrast(92%);
     height  : 1.5em;
-    left    : 0.5rem;
+    left    : 1rem;
     z-index : 2;
   }
 
@@ -58,6 +58,7 @@
     margin-bottom: 0.5rem;
     color        : var(--text-grey-black);
   }
+
   .categories--btn-container {
     width          : 100%;
     display        : flex;
@@ -72,32 +73,31 @@
   .button--state-active {
     background-color: var(--secondary-accent);
     color           : var(--text-white);
-    box-shadow: 2px 2px 10px 0px rgba(74, 74, 74, 0.47);
-    width: 30%;
+    box-shadow      : 2px 2px 10px 0px rgba(74, 74, 74, 0.47);
+    width           : 30%;
   }
 
   .button--state-inactive {
-  background-color: var(--secondary-light);
-  color: var(--text-grey-black);
-  opacity   : 65%;
-  box-shadow: 2px 2px 10px 0px rgba(74, 74, 74, 0.47);
-  width: 30%;
+    background-color: var(--secondary-light);
+    color           : var(--text-grey-black);
+    opacity         : 65%;
+    box-shadow      : 2px 2px 10px 0px rgba(74, 74, 74, 0.47);
+    width           : 30%;
   }
 
   .products {
     display              : grid;
     grid-template-columns: auto auto;
-    height           : 50vh;
     gap                  : 0.6rem;
     margin-top           : 1.5rem;
     overflow-y           : auto;
     overflow-x           : hidden;
     scrollbar-width      : none;
     -ms-overflow-style   : none;
-    position             : absolute;
-    padding              : 0.2rem 1rem;
+    padding              : 0.2rem;
     left                 : 0;
     right                : 0;
+    flex: 1;
   }
 
   .products::-webkit-scrollbar {
@@ -119,12 +119,23 @@
   }
 
   .product-card--picture {
-    width : 90%;
-    height: 45%;
+    width     : 90%;
+    height    : 45%;
+    align-self: center;
   }
 
   .product-card--addBtn {
     display        : flex;
     justify-content: space-between;
     height         : 10%;
-}
+  }
+
+  .search--product-card {
+    width : fit-content;
+    height: max-content;
+  }
+
+  .search--product-card .product-card--picture {
+    width : 75%;
+    height: max-content;
+  }
